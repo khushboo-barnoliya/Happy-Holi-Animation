@@ -1,0 +1,73 @@
+*{
+  font-family: 'DM Sans';
+  user-select: none;
+}
+
+main{
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+}
+
+.nav-item .anchor{
+  transition: all 0.5s ease;
+  z-index: 10;
+}
+
+#navbar{
+  z-index: 2;
+}
+
+.nav-item:hover .anchor{
+  font-weight: 600 !important;
+  color: #ff6f16 !important;
+  transform: rotate(-10deg);
+}
+
+#heroBg{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#heroBg video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.text{
+  margin-top: -5% !important;
+}
+
+.text h3{
+  z-index: 2;
+}
+.text h3::after{
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ff6f16;
+  animation: full 2s ease;
+}
+
+@keyframes full{
+  0%{
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  100%{
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.text h1{
+  font-size: 10vw;
+  font-weight: 1000 !important;
+  z-index: 2;
+}
